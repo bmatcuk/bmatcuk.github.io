@@ -1,0 +1,279 @@
+@import "_mixins";
+@import "_colors";
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+@import "_normalize";
+html { font-size: 62.5%; }
+html, body { height: 100%; }
+
+.textured {
+  background-image: url(/assets/images/texture.png);
+}
+
+body {
+  background-color: $background-color;
+  font-family: 'Lato', sans-serif;
+  @include font-size(16);
+  @extend .textured;
+  font-weight: 400;
+  line-height: 1.3;
+  color: $color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ubuntu', sans-serif;
+  text-shadow: $heading-text-shadow;
+  color: $heading-color;
+  font-style: italic;
+  margin: 0 0 0.5em;
+  font-weight: 500;
+}
+
+p {
+  text-shadow: $text-shadow;
+  margin: 0.5em 0;
+}
+
+a:link, a:visited {
+  @include transition((color, text-shadow), 1s);
+  text-shadow: $link-text-shadow;
+  text-decoration: none;
+  color: $link-color;
+}
+
+a:hover, a:active {
+  text-shadow: $link-hover-text-shadow;
+  color: $link-hover-color;
+  text-decoration: none;
+}
+
+header#banner {
+  background: $banner-background-color $banner-background-image no-repeat center;
+  @include box-shadow(0, 2px, 2px, 0, $banner-box-shadow-color);
+  padding-top: 150px;
+  height: 400px;
+  
+  h1, h6 {
+    color: $banner-color;
+    text-align: center;
+    margin: 0 auto;
+    width: 960px;
+  }
+  
+  h1 {
+    @include font-size(64);
+    margin-bottom: 0.3em;
+    
+    .light {
+      color: $light-banner-color;
+      text-shadow: none;
+    }
+  }
+  
+  hr {
+    border: 2px solid $banner-color;
+    margin: 0 auto;
+    width: 300px;
+  }
+
+  h6 {
+    @include font-size(5);
+    margin-top: 1em;
+  }
+}
+
+nav {
+  background-color: $banner-background-color;
+  @extend .textured;
+  padding: 10px 0;
+  
+  h1 {
+    color: $banner-color;
+    margin: 0 auto;
+    width: 960px;
+    
+    .light {
+      color: $light-banner-color;
+      text-shadow: none;
+    }
+    
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+      text-shadow: none;
+      color: inherit;
+    }
+  }
+}
+
+body > section:only-of-type {
+  @include min-height(100%);
+  padding-top: 400px;
+  margin-top: -400px;
+  padding-bottom: 91px;
+  margin-bottom: -91px;
+}
+
+section:nth-of-type(even) {
+  background-color: $dark-background-color;
+  @extend .textured;
+}
+
+article {
+  padding: 50px 0;
+  margin: 0 auto;
+  width: 960px;
+  
+  header {
+    margin: 0 auto;
+    width: 800px;
+    
+    [class^="icon-"],
+    [class*=" icon-"] {
+      color: $heading-color;
+    }
+    
+    .icon-muted {
+      color: $light-heading-color;
+    }
+  }
+}
+
+main {
+  @include min-height(100%);
+  margin: -61px auto -91px;
+  padding: 61px 0 91px;
+  width: 960px;
+  
+  header {
+    @extend .cf;
+    
+    [class^="icon-"],
+    [class*=" icon-"] {
+      color: $heading-color;
+    }
+    
+    .icon-muted {
+      color: $light-heading-color;
+    }
+    
+    h2 {
+      @include font-size(30);
+      margin: 0;
+    }
+    
+    h3 {
+      color: $light-heading-color;
+      @include font-size(12);
+      text-shadow: none;
+    }
+  }
+}
+
+footer {
+  background-color: $banner-background-color;
+  @extend .textured;
+  
+  article {
+    padding-bottom: 0;
+    
+    hr {
+      border: 2px solid $banner-color;
+      margin: 0 auto 25px;
+      width: 400px;
+    }
+    
+    h6 {
+      color: $banner-color;
+      text-align: center;
+    }
+  }
+}
+
+ul.project-list {
+  @extend .cf;
+  margin: 30px 0 0 -20px;
+  list-style-type: none;
+  width: 980px;
+  padding: 0;
+  
+  li {
+    padding-left: 2.142857142857143em * 1.3125;
+    position: relative;
+    margin-left: 20px;
+    float: left;
+    width: 470px;
+    
+    h3 {
+      @include font-size(21);
+    }
+    
+    [class^="icon-"],
+    [class*=" icon-"] {
+      width: 2.142857142857143em;
+      line-height: inherit;
+      position: absolute;
+      text-align: center;
+      left: 0;
+    }
+  }
+}
+
+ul.latest-posts {
+  @extend .cf;
+  margin: 30px 0 0 -20px;
+  list-style-type: none;
+  width: 980px;
+  padding: 0;
+  
+  li {
+    background-color: $background-color;
+    padding: 20px 22px 15px 32px;
+    position: relative;
+    @extend .textured;
+    margin-left: 15px;
+    width: 310px;
+    float: left;
+    
+    [class^="icon-"],
+    [class*=" icon-"] {
+      line-height: inherit;
+      position: absolute;
+      text-align: center;
+      width: 32px;
+      left: 0;
+    }
+    
+    img {
+      border: 1px solid $color;
+      padding: 1px;
+      width: 256px;
+      height: 256px;
+    }
+    
+    h3 {
+      @include transition((color, text-shadow), 1s);
+      text-shadow: $link-text-shadow;
+      @include font-size(21);
+      color: $link-color;
+      margin: 0;
+    }
+    
+    a:hover h3 {
+      text-shadow: $heading-text-shadow;
+      color: $heading-color;
+    }
+    
+    h4 {
+      @include transform(rotate(-90deg) translateX(-100%), left, top);
+      text-shadow: $text-shadow;
+      @include font-size(16);
+      position: absolute;
+      line-height: 32px;
+      color: $color;
+      top: 50px;
+      left: 0;
+    }
+  }
+}

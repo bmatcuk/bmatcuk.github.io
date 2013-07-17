@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% if page.title %}{{ page.title }} - {% endif %}-:&amp;[squeg.net)%.</title>
+  <link href='http://fonts.googleapis.com/css?family=Lato|Ubuntu:500italic' rel='stylesheet' type='text/css' />
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+  <link href="/assets/stylesheets/site.css" media="all" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <nav>
+    <h1><span class="light" aria-hidden="true">-:&amp;[</span><a href="/">squeg.net</a><span class="light" aria-hidden="true">)%.</span></h1>
+  </nav>
+  <main>
+    <header>
+      <img src="{{ page.banner }}" />
+      <i class="icon-bookmark pull-left icon-4x icon-muted"></i>
+      <h2>{{ page.title }}</h2>
+      <h3>{{ page.date | date: "%B %d" }}</h3>
+    </header>
+    {{ content }}
+  </main>
+  <footer>
+    <article>
+      <hr />
+      <h6>&copy; 2013 Bob Matcuk</h6>
+    </article>
+  </footer>
+</body>
+</html>

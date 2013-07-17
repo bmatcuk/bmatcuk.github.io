@@ -1,0 +1,20 @@
+$background-color: lighten(#c5b4a4, 25%);
+$dark-background-color: darken($background-color, 3%);
+
+$banner-background-image: url(/assets/images/banner.jpg);
+$banner-background-color: #544f6f;
+$banner-color: white;
+$light-banner-color: rgba($banner-color, 0.5);
+$banner-box-shadow-color: rgba(#0e0002, 0.5);
+
+$color: lighten(#544f6f, 15%);
+$text-shadow: -1px -1px 0 rgba($color, 0.2);
+
+$heading-color: #f0835c;
+$heading-text-shadow: 1px 1px 1px rgba($heading-color, 0.8);
+$light-heading-color: lighten($heading-color, 20%);
+
+$link-color: #544f6f;
+$link-text-shadow: $text-shadow;
+$link-hover-color: darken($heading-color, 20%);
+$link-hover-text-shadow: $heading-text-shadow;

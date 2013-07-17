@@ -1,0 +1,57 @@
+---
+layout: default
+---
+<header id="banner">
+  <h1><span class="light" aria-hidden="true">-:&amp;[</span>squeg.net<span class="light" aria-hidden="true">)%.</span></h1>
+  <hr />
+  <h6 aria-hidden="true">&mdash; v. to oscillate in a highly irregular fashion &mdash;</h6>
+</header>
+
+<section>
+  <article>
+    <header>
+      <i class="icon-code pull-left icon-4x icon-muted"></i>
+      <h2>PROJECTS</h2>
+      <p>
+        Sometimes Bob likes to work on things...
+        you know...
+        besides real work.
+      </p>
+    </header>
+    <ul class="project-list">
+      <li>
+        <h3>
+          <a href="http://github.com/bmatcuk/snidely_whiplash">
+            <i class="icon-puzzle-piece"></i>
+            snidely_whiplash
+          </a>
+        </h3>
+        <p>
+          snidely_whiplash easily converts simple Rails partial views into client-side templates that can be used via ICanHaz/mustache.
+        </p>
+      </li>
+    </ul>
+  </article>
+</section>
+
+<section>
+  <article>
+    <header>
+      <i class="icon-book pull-left icon-4x icon-muted"></i>
+      <h2>LATEST STUFF</h2>
+      <p>What has Bob been up to?</p>
+    </header>
+    <ul class="latest-posts">
+      {% for post in paginator.posts %}
+        <li>
+          <i class="icon-calendar-empty"></i>
+          <a href="{{ post.url }}">
+            <img src="{{ post.thumb }}" />
+            <h3>{{ post.title }}</h3>
+          </a>
+          <h4>{{ post.date | date: "%B" | upcase }}&emsp;&emsp;{{ post.date | date: "%m" | upcase }}</h4>
+        </li>
+      {% endfor %}
+    </ul>
+  </article>
+</section>

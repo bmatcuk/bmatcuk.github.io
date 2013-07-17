@@ -1,0 +1,13 @@
+destination: ./_site
+permalink: /:year/:month/:day/:title/
+exclude: ["config.rb", "Gemfile", "Gemfile.lock", "README.md", "assets/sass"]
+timezone: Pacific/Honolulu
+paginate: 3
+
+safe: true
+lsi: false
+pygments: true
+
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
