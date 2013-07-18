@@ -116,3 +116,34 @@
   transform: $transform;
   transform-origin: $originx $originy;
 }
+
+@mixin columns($width: null, $count: null, $gap: null, $rule: null) {
+  @if $width != null {
+    -webkit-column-width: $width;
+    -moz-column-width: $width;
+    -ms-column-width: $width;
+    -o-column-width: $width;
+    column-width: $width;
+  }
+  @if $count != null {
+    -webkit-column-count: $count;
+    -moz-column-count: $count;
+    -ms-column-count: $count;
+    -o-column-count: $count;
+    column-count: $count
+  }
+  @if $gap != null {
+    -webkit-column-gap: $gap;
+    -moz-column-gap: $gap;
+    -ms-column-gap: $gap;
+    -o-column-gap: $gap;
+    column-gap: $gap;
+  }
+  @if $rule != null {
+    -webkit-column-rule: $rule;
+    -moz-column-rule: $rule;
+    -ms-column-rule: $rule;
+    -o-column-rule: $rule;
+    column-rule: $rule;
+  }
+}
