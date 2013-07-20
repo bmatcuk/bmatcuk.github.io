@@ -418,7 +418,7 @@ header#banner {
   -webkit-box-shadow: 0 2px 2px 0 rgba(14, 0, 2, 0.5);
   -moz-box-shadow: 0 2px 2px 0 rgba(14, 0, 2, 0.5);
   box-shadow: 0 2px 2px 0 rgba(14, 0, 2, 0.5);
-  padding-top: 150px;
+  padding-top: 137px;
   height: 400px; }
   header#banner h1, header#banner h6 {
     color: white;
@@ -492,26 +492,28 @@ main {
   padding-bottom: 93px;
   margin-bottom: -93px; }
   main img.post-banner,
-  main header,
   main article {
     margin: 0 auto;
     width: 960px; }
   main img.post-banner {
     display: block; }
-  main header [class^="icon-"],
-  main header [class*=" icon-"] {
-    color: #f0835c; }
-  main header .icon-muted {
-    color: #f9cab9; }
-  main header h2 {
-    font-size: 30px;
-    font-size: 3rem;
-    margin: 0; }
-  main header h3 {
-    color: #f9cab9;
-    font-size: 12px;
-    font-size: 1.2rem;
-    text-shadow: none; }
+  main header {
+    margin: 50px auto 0;
+    width: 800px; }
+    main header [class^="icon-"],
+    main header [class*=" icon-"] {
+      color: #f0835c; }
+    main header .icon-muted {
+      color: #f9cab9; }
+    main header h2 {
+      font-size: 30px;
+      font-size: 3rem;
+      margin: 0; }
+    main header h3 {
+      color: #f9cab9;
+      font-size: 12px;
+      font-size: 1.2rem;
+      text-shadow: none; }
   main article {
     -webkit-column-count: 3;
     -moz-column-count: 3;
@@ -522,7 +524,8 @@ main {
     -moz-column-gap: 15px;
     -ms-column-gap: 15px;
     -o-column-gap: 15px;
-    column-gap: 15px; }
+    column-gap: 15px;
+    padding-bottom: 50px; }
 
 footer {
   background-color: #544f6f; }
@@ -646,12 +649,18 @@ ul.latest-posts {
   section {
     padding: 0 5px; }
     section article {
+      padding: 5.2% 0;
       width: 100%; }
       section article header {
-        width: 83.3%; }
+        padding: 0 8.3%;
+        width: 100%; }
 
-  main header,
+  main header {
+    margin-top: 5.2%;
+    padding: 0 8.3%;
+    width: 100%; }
   main article {
+    padding-bottom: 5.2%;
     padding-right: 5px;
     padding-left: 5px;
     width: 100%; }
@@ -679,8 +688,81 @@ ul.latest-posts {
       ul.latest-posts li img {
         max-width: 100%;
         display: block;
-        height: auto; } }
+        height: auto;
+        width: auto; } }
 @media (max-width: 960px) {
+  header#banner {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-bottom: 27.4%;
+    padding-top: 14.3%;
+    position: relative;
+    height: auto; }
+    header#banner div {
+      position: absolute;
+      width: 100%; }
+
   main img.post-banner {
     max-width: 100%;
-    height: auto; } }
+    height: auto;
+    width: auto; } }
+@media (max-width: 800px) {
+  header#banner h1 {
+    font-size: 53px;
+    font-size: 5.3rem; }
+  header#banner hr {
+    width: 37.5%; }
+
+  section article header {
+    padding: 0 6.2%; }
+
+  main header {
+    padding: 0 6.2%; }
+  main article {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    -ms-column-count: 2;
+    -o-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 15px;
+    -moz-column-gap: 15px;
+    -ms-column-gap: 15px;
+    -o-column-gap: 15px;
+    column-gap: 15px; } }
+@media (max-width: 640px) {
+  header#banner h1 {
+    font-size: 43px;
+    font-size: 4.3rem; }
+
+  section article header {
+    padding: 0 4.1%; }
+
+  main header {
+    padding: 0 4.1%; }
+  main article {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    -ms-column-count: 1;
+    -o-column-count: 1;
+    column-count: 1; }
+
+  footer article hr {
+    width: 62.5%; }
+
+  ul.project-list li {
+    margin-left: 0;
+    float: none;
+    width: 100%; } }
+@media (max-width: 380px) {
+  header#banner h1 {
+    font-size: 25px;
+    font-size: 2.5rem; }
+
+  section article header {
+    padding: 0 2%; }
+
+  main header {
+    padding: 0 2%; } }
