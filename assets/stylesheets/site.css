@@ -414,7 +414,7 @@ a:active {
     text-decoration: none; }
 
 header#banner {
-  background: #544f6f url(/assets/images/banner.jpg) no-repeat center;
+  background: #544f6f url(/assets/images/banner.jpg) no-repeat top center;
   -webkit-box-shadow: 0 2px 2px 0 rgba(14, 0, 2, 0.5);
   -moz-box-shadow: 0 2px 2px 0 rgba(14, 0, 2, 0.5);
   box-shadow: 0 2px 2px 0 rgba(14, 0, 2, 0.5);
@@ -733,9 +733,11 @@ ul.latest-posts {
     -o-column-gap: 15px;
     column-gap: 15px; } }
 @media (max-width: 640px) {
-  header#banner h1 {
-    font-size: 43px;
-    font-size: 4.3rem; }
+  header#banner {
+    background-image: url(/assets/images/banner_small.jpg); }
+    header#banner h1 {
+      font-size: 43px;
+      font-size: 4.3rem; }
 
   section article header {
     padding: 0 4.1%; }

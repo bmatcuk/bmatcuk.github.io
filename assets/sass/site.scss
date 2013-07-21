@@ -58,7 +58,7 @@ a:active {
 }
 
 header#banner {
-  background: $banner-background-color $banner-background-image no-repeat center;
+  background: $banner-background-color $banner-background-image no-repeat top center;
   @include box-shadow(0, 2px, 2px, 0, $banner-box-shadow-color);
   padding-top: 137px;
   height: 400px;
@@ -470,6 +470,8 @@ ul.latest-posts {
 
 @media (max-width: 640px) {
   header#banner {
+    background-image: $small-banner-background-image;
+    
     h1 {
       @include font-size(43);
     }
