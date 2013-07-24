@@ -1,0 +1,10 @@
+---
+---
+{% for post in site.posts limit:3 %}
+  {% assign id = post.id | replace: '/', '-' | prepend: 'post' %}
+  #{{ id }} figure { background-image: url({{ post.thumb }}); }
+  
+  @media (max-width: {% if forloop.first %}640{% else %}380{% endif %}px) {
+    #{{ id }} figure { background-image: url({{ post.small_banner }}); }
+  }
+{% endfor %}

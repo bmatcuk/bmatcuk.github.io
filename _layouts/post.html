@@ -5,6 +5,13 @@
   <link href='http://fonts.googleapis.com/css?family=Lato|Ubuntu:500italic' rel='stylesheet' type='text/css' />
   <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
   <link href="/assets/stylesheets/site.css" media="all" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    figure.post-banner { background-image: url({{ page.banner }}); }
+    
+    @media (max-width: 640px) {
+      figure.post-banner { background-image: url({{ page.small_banner }}); }
+    }
+  </style>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 </head>
 <body>
@@ -12,13 +19,14 @@
     <h1><span class="light" aria-hidden="true">-:&amp;[</span><a href="/">squeg.net</a><span class="light" aria-hidden="true">)%.</span></h1>
   </nav>
   <main>
-    <img class="post-banner" src="{{ page.banner }}" />
+    <figure class="post-banner"></figure>
     <header>
       <i class="icon-bookmark pull-left icon-4x icon-muted"></i>
       <h2>{{ page.title }}</h2>
       <h3>{{ page.date | date: "%B %d" }}</h3>
     </header>
-    <article>
+    {% capture colcalc %}{{ page.content | size | minus:100 }}{% endcapture %}
+    <article{% unless colcalc contains '-' %} class="with-columns"{% endunless %}>
       {{ content }}
     </article>
   </main>

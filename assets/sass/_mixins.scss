@@ -23,10 +23,20 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$top}', endColorstr='#{$bottom}',GradientType=0 ); /* IE6-9 */
 }
 
-@mixin box-shadow($horizontal, $vertical, $blur: 5px, $spread: 5px, $color: rgba(30, 30, 30, 0.75)) {
-	-webkit-box-shadow: $horizontal $vertical $blur $spread $color;
-  -moz-box-shadow:    $horizontal $vertical $blur $spread $color;
-  box-shadow:         $horizontal $vertical $blur $spread $color;
+@mixin box-shadow($horizontal, $vertical: 0, $blur: 5px, $spread: 5px, $color: rgba(30, 30, 30, 0.75)) {
+  @if $horizontal == none {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+  } @else {
+  	-webkit-box-shadow: $horizontal $vertical $blur $spread $color;
+    -moz-box-shadow:    $horizontal $vertical $blur $spread $color;
+    -ms-box-shadow:     $horizontal $vertical $blur $spread $color;
+    -o-box-shadow:      $horizontal $vertical $blur $spread $color;
+    box-shadow:         $horizontal $vertical $blur $spread $color;
+  }
 }
 
 @mixin border-radius($radius: 5px) {
@@ -104,11 +114,11 @@
   height: $height;
 }
 
-@mixin transform($transform, $originx, $originy) {
+@mixin transform($transform, $originx: center, $originy: center) {
   -webkit-transform: $transform;
   -webkit-transform-origin: $originx $originy;
   -moz-transform: $transform;
-  -moz-transform: $originx $originy;
+  -moz-transform-origin: $originx $originy;
   -ms-transform: $transform;
   -ms-transform-origin: $originx $originy;
   -o-transform: $transform;
@@ -146,4 +156,20 @@
     -o-column-rule: $rule;
     column-rule: $rule;
   }
+}
+
+@mixin background-size($size) {
+  -webkit-background-size: $size;
+  -moz-background-size: $size;
+  -ms-background-size: $size;
+  -o-background-size: $size;
+  background-size: $size;
+}
+
+@mixin box-sizing($sizing) {
+  -webkit-box-sizing: $sizing;
+  -moz-box-sizing: $sizing;
+  -ms-box-sizing: $sizing;
+  -o-box-sizing: $sizing;
+  box-sizing: $sizing;
 }

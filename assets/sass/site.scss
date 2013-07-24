@@ -1,7 +1,7 @@
 @import "_mixins";
 @import "_colors";
 
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+* { @include box-sizing(border-box); }
 @import "_normalize";
 html { font-size: 62.5%; }
 html, body { height: 100%; }
@@ -160,14 +160,18 @@ main {
   padding-bottom: 93px;
   margin-bottom: -93px;
   
-  img.post-banner,
+  figure.post-banner,
   article {
     margin: 0 auto;
     width: 960px;
   }
   
-  img.post-banner {
-    display: block;
+  figure.post-banner {
+    @include background-size(cover);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 31.25%;
+    height: 0;
   }
   
   header {
@@ -197,8 +201,11 @@ main {
   }
   
   article {
-    @include columns(null, 3, 15px);
     padding-bottom: 50px;
+    
+    &.with-columns {
+      @include columns(25em, null, 15px);
+    }
   }
 }
 
@@ -287,18 +294,35 @@ ul.latest-posts {
       left: 0;
     }
     
-    img {
-      border: 1px solid $color;
-      padding: 1px;
-      width: 256px;
-      height: 256px;
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+      text-decoration: none;
+      text-shadow: none;
+      color: inherit;
+    }
+    
+    figure {
+      @include box-shadow(0, 0, 0, 1px, $color);
+      border: 1px solid $background-color;
+      @include background-size(cover);
+      background-repeat: no-repeat;
+      background-position: center;
+      padding-top: 100%;
+      width: 260px;
+      height: 0;
     }
     
     h3 {
       @include transition((color, text-shadow), 1s);
       text-shadow: $link-text-shadow;
+      text-decoration: underline;
+      text-overflow: ellipsis;
       @include font-size(21);
+      white-space: nowrap;
       color: $link-color;
+      overflow: hidden;
       margin: 0;
     }
     
@@ -401,10 +425,8 @@ ul.latest-posts {
         margin-left: 0;
       }
       
-      img {
+      figure {
         max-width: 100%;
-        display: block;
-        height: auto;
         width: auto;
       }
     }
@@ -413,11 +435,7 @@ ul.latest-posts {
 
 @media (max-width: 960px) {
   header#banner {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -ms-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    @include background-size(cover);
     padding-bottom: 27.4%;
     padding-top: 14.3%;
     position: relative;
@@ -430,9 +448,8 @@ ul.latest-posts {
   }
   
   main {
-    img.post-banner {
+    figure.post-banner {
       max-width: 100%;
-      height: auto;
       width: auto;
     }
   }
@@ -461,10 +478,6 @@ ul.latest-posts {
     header {
       padding: 0 6.2%;
     }
-    
-    article {
-      @include columns(null, 2, 15px);
-    }
   }
 }
 
@@ -489,10 +502,6 @@ ul.latest-posts {
     header {
       padding: 0 4.1%;
     }
-    
-    article {
-      @include columns(null, 1, null);
-    }
   }
   
   footer {
@@ -508,6 +517,65 @@ ul.latest-posts {
       margin-left: 0;
       float: none;
       width: 100%;
+    }
+  }
+  
+  ul.latest-posts {
+    margin-right: -5px;
+    margin-left: -5px;
+    width: auto;
+    
+    li:first-of-type {
+      background: transparent;
+      margin: 0 0 4.1%;
+      width: 100%;
+      float: none;
+      padding: 0;
+      
+      [class^="icon-"],
+      [class*=" icon-"] {
+        color: $banner-color;
+        left: auto;
+        right: 5px;
+        top: 5px;
+      }
+
+      figure {
+        @include box-shadow(none);
+        padding-top: 31.25%;
+        border-width: 0;
+      }
+
+      h3 {
+        color: $banner-color;
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
+      }
+      
+      a:hover h3 {
+        color: $banner-color;
+      }
+
+      h4 {
+        @include transform(none);
+        line-height: inherit;
+        color: $banner-color;
+        text-shadow: none;
+        right: 37px;
+        left: auto;
+        top: 5px;
+      }
+    }
+    
+    li:nth-of-type(2) {
+      margin-left: 0;
+      width: 49%;
+    }
+    
+    li:nth-of-type(n+3) {
+      margin-left: 2%;
+      width: 49%;
     }
   }
 }
@@ -530,6 +598,55 @@ ul.latest-posts {
   main {
     header {
       padding: 0 2%;
+    }
+  }
+  
+  ul.latest-posts {
+    li:first-of-type {
+      background: transparent;
+      margin: 0;
+      width: 100%;
+      float: none;
+      padding: 0;
+      
+      &:last-of-type {
+        margin-bottom: 4.1%;
+      }
+      
+      [class^="icon-"],
+      [class*=" icon-"] {
+        color: $banner-color;
+        left: auto;
+        right: 5px;
+        top: 5px;
+      }
+
+      figure {
+        @include box-shadow(none);
+        padding-top: 31.25%;
+        border-width: 0;
+      }
+
+      h3 {
+        color: $banner-color;
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
+      }
+      
+      a:hover h3 {
+        color: $banner-color;
+      }
+
+      h4 {
+        @include transform(none);
+        line-height: inherit;
+        color: $banner-color;
+        text-shadow: none;
+        right: 37px;
+        left: auto;
+        top: 5px;
+      }
     }
   }
 }
