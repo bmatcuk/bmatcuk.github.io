@@ -234,8 +234,8 @@ footer {
 
 ul.project-list {
   @extend .cf;
-  margin-top: 30px;
   list-style-type: none;
+  margin: 10px 0 0;
   width: 960px;
   padding: 0;
   
@@ -243,11 +243,13 @@ ul.project-list {
     padding-left: 2.142857142857143em * 1.3125;
     position: relative;
     margin-left: 20px;
-    float: left;
+    margin-top: 20px;
     width: 470px;
+    float: left;
 
-    &:first-of-type {
+    &:nth-of-type(odd) {
       margin-left: 0;
+      clear: both;
     }
     
     h3 {
@@ -406,9 +408,9 @@ ul.latest-posts {
     
     li {
       margin-left: 2%;
-      width: 48%;
+      width: 49%;
       
-      &:first-of-type {
+      &:nth-of-type(odd) {
         margin-left: 0;
       }
     }
