@@ -1,0 +1,77 @@
+==================================================================
+https://keybase.io/bmatcuk
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://www.squeg.net
+  * I am bmatcuk (https://keybase.io/bmatcuk) on keybase.
+  * I have a public key with fingerprint 0E11 BE1C 2864 DFC1 43F2  56D9 1E03 CE3E 4EA5 EC91
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.5.1"
+        },
+        "key": {
+            "fingerprint": "0e11be1c2864dfc143f256d91e03ce3e4ea5ec91",
+            "host": "keybase.io",
+            "key_id": "1E03CE3E4EA5EC91",
+            "uid": "3781e4da332fb6f3c843dd6cbb2ece00",
+            "username": "bmatcuk"
+        },
+        "merkle_root": {
+            "ctime": 1410152280,
+            "hash": "38ab78d2cb0ec26d5a09c63e1d644aa7a8e4d7a9800fc60d34a3b226a638c6365bb1fdc34cae2739f2ed38f5f033ca58ea0d6f0dc3463c1fb572873079b6fc29",
+            "seqno": 47460
+        },
+        "service": {
+            "hostname": "www.squeg.net",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1410152482,
+    "expire_in": 157680000,
+    "prev": "de2b20983448e5d7dde08bb40d887159bd1422b6c34e6c268eaca55ae5312efd",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
+Comment: GPGTools - https://gpgtools.org
+
+owFVkl1oHFUUx3ebGEkwIlWohVjKWPsg6/R+zdcSTduwFMQmaoKxjXR7P85spklm
+tjOzmy7rPgRpoVJEkYLgQwmhillTX2Ji60OoEF9s9KHUB61CsUgtrRCLUFBTZ9aI
+9m1m7m/+5/zOuW93t2W6stvavn5u4Oytd7Jf/SIyw922VtdEoGpavq7JCQ/8OH3y
++SRoeW0caoJHoHvBdj9QoB+Jtm8wOa0KYeQFfkIh3dCx1silePqz6/klCMuhl2Zp
+CDAWgCWxTaZciRl1iWEqBwOiEigw4AZIByeRY0EU31dVa2UWPZV8xQVE+wu0wAp7
+jEJ/i6+0DqhlY2CKU0pcYbpU2owqZUohCEhAKAUjCDeUxCSPZWU8bXcSwvEJKIZB
+0HKWsZcSmGGEDUJslDTEo7G0gs2FZSsiBQJJTGVw5EiTAlYmY5xb3E7qW9yxEXKl
+iRRlnApCTG5SO+FMQwjsKkmZ5EAs6rgEFLVdw0WUSm7YwJEyXZQSJpXYFYZFbIsi
+y0l8JHESgwiO+oGWZxYzUSN9DauehLTtdGgbblNTU3p0tAIl3Yd0ReUwiAMZTCRH
+Y3FczqfSca3cQkEUo4//SSkKz1fJzv6/VJyg9w+E2SSnwbGyF0LRSwnDMhNhhNI6
+UE0yFRBBkGNTxmwwlKUUIFsIhpRtW9hwhMKMEGEmmmAmc0y8E3uDg0ExAVf9p0mT
+PnkpiYy8ks/jSgha42S2pz2T7cp0PLApvbWZrs5H/r3K488+uL4zGNzyY+3M2gdD
+n33xZLb25o097ZcXmgcfPXJqL3Pmd998tdDz5a6nP2leeqj3Yoeb7fzo5+Gru5yV
+mYnnS33d566fHJl9hQ7tHa7Ttx7//qmFm3Mv/La7v3Lnm9Hjp7IjuRfdnbcvz8/9
+tc7PvrYazor25YsXevfl9+UOH2h8OPht4ZkTfyxtO7j5O7Kw0n9pqXp8Rp++pQ+/
+d2N18a6/tnSiM96xfHvHwy+vevceu3b92rEtW6dP/96rXroy8MZ+3Wpbv3Bo8O69
+w43Rueb+teanQ+Rq80zfpoVq/Up9pD7T/cSv0+ff/xOPvltZOXDn9dM/TX++2Dd7
+fnF+efPIDz1DWyfXxEDHIeNv
+=0gbH
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/bmatcuk
+
+==================================================================
