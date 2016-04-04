@@ -1,13 +1,18 @@
 destination: ./_site
 permalink: /:year/:month/:day/:title/
 exclude: ["config.rb", "Gemfile", "Gemfile.lock", "README.md", "assets/sass"]
+gems:
+  - jekyll-paginate
+  - jekyll-feed
 timezone: Pacific/Honolulu
 paginate: 3
+markdown: kramdown
 
-safe: true
-lsi: false
-pygments: true
+# The safe option seems to disable the jekyll plugins when it shouldn't be
+# safe: true
 
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
+title: "-:&[squeg.net)%."
+description: v. to oscillate in a highly irregular fashion
+url: http://squeg.net/
+author: Bob Matcuk
+
