@@ -23,6 +23,26 @@ layout: default
     <ul class="project-list">
       <li>
         <h3>
+          <a href="https://github.com/bmatcuk/helm-take-ownership">
+            helm-take-ownership
+          </a>
+        </h3>
+        <p>
+          transfer ownership of a kubernetes release to helm.
+        </p>
+      </li>
+      <li>
+        <h3>
+          <a href="http://www.squeg.net/web-starter-kit/">
+            web-starter-kit
+          </a>
+        </h3>
+        <p>
+          a simple starting-point app using the newest versions of webpack, babel, react, and more.
+        </p>
+      </li>
+      <li>
+        <h3>
           <a href="http://github.com/bmatcuk/snidely_whiplash">
             <i class="icon-puzzle-piece"></i>
             snidely_whiplash
@@ -245,28 +265,6 @@ layout: default
           fixed some IE issues (merged into official repo)
         </p>
       </li>
-    </ul>
-  </article>
-</section>
-
-<section>
-  <article>
-    <header>
-      <i class="icon-book pull-left icon-4x icon-muted"></i>
-      <h2>LATEST STUFF</h2>
-      <p>What has Bob been up to?</p>
-    </header>
-    <ul class="latest-posts">
-      {% for post in paginator.posts %}
-        <li id="{{ post.id | replace: '/', '-' | prepend: 'post' }}">
-          <i class="icon-calendar-empty"></i>
-          <a href="{{ post.url }}">
-            <figure></figure>
-            <h3>{{ post.title }}</h3>
-          </a>
-          <h4>{{ post.date | date: "%B" | upcase }}&emsp;{{ post.date | date: "%d" | upcase }}</h4>
-        </li>
-      {% endfor %}
     </ul>
   </article>
 </section>
