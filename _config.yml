@@ -1,7 +1,7 @@
 destination: ./_site
 permalink: /:year/:month/:day/:title/
-exclude: ["config.rb", "Gemfile", "Gemfile.lock", "README.md", "assets/sass"]
-gems:
+exclude: ["config.rb", "Gemfile", "Gemfile.lock", "Rakefile", "README.md", "assets/sass"]
+plugins:
   - jekyll-paginate
   - jekyll-feed
 timezone: Pacific/Honolulu
